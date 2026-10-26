@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PMP Application Assessment</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F5F7FA;--card:#FFFFFF;--ink:#14213D;--mut:#55627A;--line:#DCE2EC;--acc:#1D4ED8;--accT:#FFFFFF;--ok:#0F7B4D;--okBg:#E3F5EC;--warn:#9A5B00;--warnBg:#FFF1D6;--bad:#B42318;--badBg:#FDE8E6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1220;--card:#161D30;--ink:#EAF0FF;--mut:#9FB0CF;--line:#27314B;--acc:#6EA0FF;--accT:#0D1220;--ok:#5BD69B;--okBg:#12301F;--warn:#F2B84B;--warnBg:#33270C;--bad:#FF8E85;--badBg:#3A1714;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1220;--card:#161D30;--ink:#EAF0FF;--mut:#9FB0CF;--line:#27314B;--acc:#6EA0FF;--accT:#0D1220;--ok:#5BD69B;--okBg:#12301F;--warn:#F2B84B;--warnBg:#33270C;--bad:#FF8E85;--badBg:#3A1714;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55}
+.w{max-width:960px;margin:0 auto;padding:32px 20px 72px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:8px 0 12px}
+h2{font-size:22px;margin:0 0 16px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--acc)}
+.lead{color:var(--mut);font-size:18px;max-width:700px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:20px}
+label{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+select,input[type=text],input[type=month],input[type=number]{width:100%;box-sizing:border-box;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+button{font:inherit;min-height:44px;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-weight:600}
+button.p{background:var(--acc);color:var(--accT);border-color:var(--acc)}
+.proj{border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-weight:400}
+.chk input{width:20px;height:20px;margin-top:2px;flex:none}
+.bar{height:14px;background:var(--line);border-radius:99px;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;background:var(--acc);width:0}
+.badge{display:inline-block;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px}
+.ok{background:var(--okBg);color:var(--ok)}.warn{background:var(--warnBg);color:var(--warn)}.bad{background:var(--badBg);color:var(--bad)}
+.note{font-size:13px;color:var(--mut)}
+ul.t{padding-left:20px;margin:8px 0}
+details summary{cursor:pointer;font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="eyebrow">PMI® PMP® CERTIFICATION</div>
+<h1>PMP Application Assessment</h1>
+<p class="lead">Check whether you are ready to apply. Enter your education, training and project experience and get an instant readiness report with next steps.</p>
+
+<section class="card" aria-labelledby="s1">
+<h2 id="s1">1. Education and training</h2>
+<div class="g">
+<div><label for="edu">Highest education</label>
+<select id="edu"><option value="sec">Secondary diploma, associate degree or equivalent</option><option value="deg" selected>Four-year degree or equivalent</option><option value="gac">Degree from a PMI GAC-accredited program</option></select></div>
+<div><label for="hrs">35 hours of project management education</label>
+<select id="hrs"><option value="no">Not yet completed</option><option value="yes">Completed (35+ contact hours)</option><option value="capm">I hold an active CAPM®</option></select></div>
+</div>
+<details style="margin-top:16px"><summary>Requirement values used (edit to match the current PMI handbook)</summary>
+<div class="g" style="margin-top:12px">
+<div><label for="m_sec">Months of experience: secondary diploma</label><input id="m_sec" type="number" min="0" value="60"></div>
+<div><label for="m_deg">Months of experience: four-year degree</label><input id="m_deg" type="number" min="0" value="36"></div>
+<div><label for="m_gac">Months of experience: GAC-accredited degree</label><input id="m_gac" type="number" min="0" value="24"></div>
+<div><label for="win">Experience window (years)</label><input id="win" type="number" min="1" value="8"></div>
+</div>
+<p class="note">PMI updated parts of the PMP requirements in 2026. These defaults are a starting point, so confirm the figures on pmi.org before you apply.</p></details>
+</section>
+
+<section class="card" aria-labelledby="s2">
+<h2 id="s2">2. Project leadership experience</h2>
+<p class="note" style="margin-top:-8px">Add each project you led or directed. Overlapping months are counted once, and only months inside the window count.</p>
+<div id="plist"></div>
+<div class="row"><button class="p" id="add" type="button">+ Add a project</button><button id="clr" type="button">Clear all</button></div>
+</section>
+
+<section class="card" aria-labelledby="s3" aria-live="polite">
+<h2 id="s3">3. Your readiness report</h2>
+<div id="verdict"></div>
+<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="pb"><i id="pf"></i></div>
+<div id="stats" class="note"></div>
+<ul class="t" id="gaps"></ul>
+</section>
+
+<section class="card" aria-labelledby="s4">
+<h2 id="s4">4. Application checklist</h2>
+<div id="cl"></div>
+<p class="note">Applications can be selected for a PMI audit, so keep proof of education, training certificates and contact details for your project managers or sponsors.</p>
+</section>
+
+<p class="note" style="margin-top:24px">This is an unofficial self-assessment tool. It is not affiliated with PMI and does not guarantee your application will be approved. PMI and PMP are registered marks of Project Management Institute, Inc. Always confirm current requirements at pmi.org.</p>
+</div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var KEY="pmp-assess-v1",projects=[];
+var checklist=["Complete or confirm 35 hours of project management education (or hold an active CAPM®)","Gather proof of your education (diploma or transcript)","List each project with start and end dates","Write a short description of each project: objective, your role, deliverables and outcome","Collect contact details for a manager or sponsor who can verify each project","Create a free PMI account and start the online application","Pay the exam fee (PMI members usually pay less)","Keep your records ready in case of an audit"];
+var cs={};
+function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(d){projects=d.p||[];cs=d.c||{};if(d.f){["edu","hrs","m_sec","m_deg","m_gac","win"].forEach(function(k){if(d.f[k]!=null)$(k).value=d.f[k]})}}}catch(e){}}
+function save(){try{var f={};["edu","hrs","m_sec","m_deg","m_gac","win"].forEach(function(k){f[k]=$(k).value});localStorage.setItem(KEY,JSON.stringify({p:projects,c:cs,f:f}))}catch(e){}}
+function mi(v){if(!v)return null;var a=v.split("-");return (+a[0])*12+(+a[1]-1)}
+function nowM(){var n=new Date();return n.getFullYear()*12+n.getMonth()}
+function renderProjects(){
+var box=$("plist");box.innerHTML="";
+if(!projects.length){var p=document.createElement("p");p.className="note";p.textContent="No projects yet. Add your first project to start.";box.appendChild(p)}
+projects.forEach(function(pr,i){
+var d=document.createElement("div");d.className="proj";
+var g=document.createElement("div");g.className="g";
+[["Project name","text","name"],["Start month","month","start"],["End month","month","end"]].forEach(function(f){
+var w=document.createElement("div");var l=document.createElement("label");l.textContent=f[0];var inp=document.createElement("input");inp.type=f[1];inp.value=pr[f[2]]||"";
+inp.setAttribute("aria-label",f[0]+" "+(i+1));
+inp.addEventListener("input",function(){pr[f[2]]=inp.value;update()});
+w.appendChild(l);w.appendChild(inp);g.appendChild(w)});
+d.appendChild(g);
+var r=document.createElement("div");r.className="row";r.style.marginTop="12px";
+var lab=document.createElement("label");lab.className="chk";lab.style.margin="0";
+var cb=document.createElement("input");cb.type="checkbox";cb.checked=pr.led!==false;
+cb.addEventListener("change",function(){pr.led=cb.checked;update()});
+var sp=document.createElement("span");sp.textContent="I led or directed the project tasks";
+lab.appendChild(cb);lab.appendChild(sp);r.appendChild(lab);
+var rm=document.createElement("button");rm.type="button";rm.textContent="Remove";
+rm.addEventListener("click",function(){projects.splice(i,1);renderProjects();update()});
+r.appendChild(rm);d.appendChild(r);box.appendChild(d)})}
+function compute(){
+var win=Math.max(1,+$("win").value||8)*12,end=nowM(),startW=end-win+1,iv=[];
+projects.forEach(function(p){if(p.led===false)return;var s=mi(p.start),e=mi(p.end);if(s==null||e==null||e<s)return;s=Math.max(s,startW);e=Math.min(e,end);if(e>=s)iv.push([s,e])});
+iv.sort(function(a,b){return a[0]-b[0]});
+var tot=0,cur=null;
+iv.forEach(function(x){if(!cur){cur=x.slice()}else if(x[0]<=cur[1]+1){cur[1]=Math.max(cur[1],x[1])}else{tot+=cur[1]-cur[0]+1;cur=x.slice()}});
+if(cur)tot+=cur[1]-cur[0]+1;return tot}
+function update(){
+var need=+$({sec:"m_sec",deg:"m_deg",gac:"m_gac"}[$("edu").value]).value||0;
+var have=compute(),hrsOk=$("hrs").value!=="no";
+var pct=need?Math.min(100,Math.round(have/need*100)):100;
+$("pf").style.width=pct+"%";$("pb").setAttribute("aria-valuenow",pct);
+var v=$("verdict"),g=$("gaps");g.innerHTML="";
+var expOk=have>=need;
+var b=document.createElement("span");b.className="badge";
+if(expOk&&hrsOk){b.className+=" ok";b.textContent="Ready to apply"}
+else if(expOk||hrsOk){b.className+=" warn";b.textContent="Almost there"}
+else{b.className+=" bad";b.textContent="Not ready yet"}
+v.innerHTML="";v.appendChild(b);
+$("stats").textContent="Qualifying experience: "+have+" of "+need+" months ("+pct+"%), counted within the last "+(+$("win").value||8)+" years.";
+function li(t){var l=document.createElement("li");l.textContent=t;g.appendChild(l)}
+if(!expOk)li("You need about "+(need-have)+" more month"+((need-have)===1?"":"s")+" of qualifying project leadership experience, or more projects entered above.");
+if(!hrsOk)li("Complete 35 hours of project management education from a qualifying provider, or earn the CAPM®.");
+if(expOk&&hrsOk)li("You meet the requirements entered. Move on to the checklist and prepare your project descriptions.");
+save()}
+function renderCl(){
+var box=$("cl");box.innerHTML="";
+checklist.forEach(function(t,i){var l=document.createElement("label");l.className="chk";var c=document.createElement("input");c.type="checkbox";c.checked=!!cs[i];
+c.addEventListener("change",function(){cs[i]=c.checked;save()});var s=document.createElement("span");s.textContent=t;l.appendChild(c);l.appendChild(s);box.appendChild(l)})}
+$("add").addEventListener("click",function(){projects.push({name:"",start:"",end:"",led:true});renderProjects();update()});
+$("clr").addEventListener("click",function(){projects=[];renderProjects();update()});
+["edu","hrs","m_sec","m_deg","m_gac","win"].forEach(function(k){$(k).addEventListener("input",update)});
+load();renderProjects();renderCl();update();
+})();
+</script>
+</body>
+</html>
